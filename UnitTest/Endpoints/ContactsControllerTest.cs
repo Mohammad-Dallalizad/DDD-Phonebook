@@ -53,14 +53,13 @@ public class ContactsControllerTest
 
     private List<Contact> GetContactsData()
     {
-        var birthdate = new DateTime(1998, 1, 27);
         List<Contact> contacts = new()
         {
-            new Contact("mohammad","dallalizad",null,"mdallalizad@gmail.com",birthdate,new Address("Iran","Tehran","Boostan","14235678"),new List<Phone>{new Phone("09123456213", (PhoneLable)1),new Phone("0912452875", (PhoneLable)1) }),
+            new Contact("mohammad","dallalizad",null,"mdallalizad@gmail.com",DateTime.UtcNow.Date,new Address("Iran","Tehran","Boostan","14235678"),new List<Phone>{new Phone("09123456213", (PhoneLable)1),new Phone("0912452875", (PhoneLable)1) }),
 
-            new Contact("alireza","dallalizad",null,"alireza@gmail.com",birthdate,new Address("Iran","Tehran","sadeqie","987654312"),new List<Phone>{new Phone("09135678341", (PhoneLable)1),new Phone("02199086316", (PhoneLable)2) }),
+            new Contact("alireza","dallalizad",null,"alireza@gmail.com",DateTime.UtcNow.Date,new Address("Iran","Tehran","sadeqie","987654312"),new List<Phone>{new Phone("09135678341", (PhoneLable)1),new Phone("02199086316", (PhoneLable)2) }),
 
-            new Contact("yaser","gholami",null,"gholami@gmail.com",birthdate,new Address("spain","madrid","123-ad","98624"),new List<Phone>{new Phone("0319863343", (PhoneLable)1),new Phone("0216543734", (PhoneLable)1) }),
+            new Contact("yaser","gholami",null,"gholami@gmail.com",DateTime.UtcNow.Date,new Address("spain","madrid","123-ad","98624"),new List<Phone>{new Phone("0319863343", (PhoneLable)1),new Phone("0216543734", (PhoneLable)1) }),
         };
 
         return contacts;
