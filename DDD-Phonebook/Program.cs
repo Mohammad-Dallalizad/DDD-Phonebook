@@ -25,7 +25,6 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
-//services.AddDbContext<PhoneBookDbContext>(c => c.UseSqlServer(configuration.GetConnectionString("SqlServer")));
 services.AddDbContext<PhoneBookDbContext>(c =>c.UseInMemoryDatabase("PhoneBook"));
 
 services.AddScoped(typeof(IRepository<>), typeof(Repository<>));

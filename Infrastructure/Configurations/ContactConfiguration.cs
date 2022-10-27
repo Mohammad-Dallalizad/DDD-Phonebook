@@ -37,8 +37,5 @@ public class ContactConfiguration : IEntityTypeConfiguration<Contact>
         builder.Property(p => p.CompanyName).HasMaxLength(50);
 
         builder.Property(p => p.Email).HasMaxLength(300);
-
-        builder.Property(p => p.Birthdate).HasColumnType("date");
-
     }
 }
